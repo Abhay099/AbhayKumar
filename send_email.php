@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Load environment variables
-        $env = parse_ini_file(__DIR__ . '/.env');
-        $smtp_email = $env['SMTP_EMAIL'] ?? 'abhay28102003kumar@gmail.com';
-        $smtp_password = $env['SMTP_PASSWORD'] ?? '';
+        // Load environment variables (Vercel/Cloud uses getenv, local uses .env file)
+        $env = file_exists(__DIR__ . '/.env') ? parse_ini_file(__DIR__ . '/.env') : [];
+        $smtp_email = getenv('SMTP_EMAIL') ?: ($env['SMTP_EMAIL'] ?? 'abhay28102003kumar@gmail.com');
+        $smtp_password = getenv('SMTP_PASSWORD') ?: ($env['SMTP_PASSWORD'] ?? '');
 
         // Server settings
         $mail->isSMTP();
