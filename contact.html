@@ -348,9 +348,14 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = 'Sending...';
             submitBtn.disabled = true;
             
-            fetch('send_email.php', {
+            const payload = Object.fromEntries(formData.entries());
+            
+            fetch('/api/send_email', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
             })
             .then(response => response.json())
             .then(data => {

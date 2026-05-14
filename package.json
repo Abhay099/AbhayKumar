@@ -1,0 +1,24 @@
+{
+  "name": "stitch_premium_digital_marketing_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhay099/AbhayKumar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abhay099/AbhayKumar/issues"
+  },
+  "homepage": "https://github.com/Abhay099/AbhayKumar#readme",
+  "dependencies": {
+    "nodemailer": "^8.0.7"
+  }
+}
