@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #323536;
+        }
+        .form-underline {
+            background-size: 0% 1px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 0.3s ease;
+            background-image: linear-gradient(#f2ca50, #f2ca50);
+        }
+        .form-underline:focus-within {
+            background-size: 100% 1px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#3c2f00",
+                        "surface-container": "#1d2021",
+                        "background": "#111415",
+                        "surface-tint": "#e9c349",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary-fixed": "#161c22",
+                        "on-secondary-fixed": "#1a1c1e",
+                        "inverse-surface": "#e1e3e4",
+                        "primary": "#f2ca50",
+                        "primary-container": "#d4af37",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#454749",
+                        "surface-dim": "#111415",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#40464c",
+                        "inverse-on-surface": "#2e3132",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#2b3137",
+                        "tertiary-fixed": "#dde3eb",
+                        "surface": "#111415",
+                        "surface-container-low": "#191c1d",
+                        "secondary": "#c6c6c9",
+                        "tertiary": "#c9cfd6",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-bright": "#373a3b",
+                        "secondary-fixed": "#e2e2e5",
+                        "secondary-fixed-dim": "#c6c6c9",
+                        "surface-container-high": "#282a2b",
+                        "outline-variant": "#4d4635",
+                        "surface-container-lowest": "#0c0f10",
+                        "error-container": "#93000a",
+                        "secondary-container": "#454749",
+                        "on-secondary": "#2f3133",
+                        "on-primary-container": "#554300",
+                        "on-background": "#e1e3e4",
+                        "on-secondary-container": "#b4b5b7",
+                        "outline": "#99907c",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "primary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "tertiary-container": "#adb3bb",
+                        "on-primary-fixed": "#241a00",
+                        "on-surface": "#e1e3e4",
+                        "surface-container-highest": "#323536",
+                        "surface-variant": "#323536",
+                        "on-surface-variant": "#d0c5af"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "section-gap-desktop": "120px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style>
+<title>Abhay Marketing Agency | Contact</title>
+<meta name="description" content="Abhay Marketing Agency provides bespoke consulting for industry leaders. We build digital legacies.">
+<meta property="og:title" content="Abhay Marketing Agency | Contact">
+<meta property="og:description" content="Abhay Marketing Agency provides bespoke consulting for industry leaders. We build digital legacies.">
+<meta property="og:url" content="https://abhaykr.page.gd/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://abhaykr.page.gd/contact.html">
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface/80 border-b border-outline-variant/30 ease-in-out transition-all duration-300">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-20">
+<a class="font-headline-md text-headline-md font-semibold tracking-tighter text-on-surface dark:text-on-surface" href="#">ABHAY</a>
+<div class="hidden md:flex gap-12 items-center">
+<a class="hover:text-primary transition-colors duration-300 text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest" href="index.html">Home</a>
+<a class="hover:text-primary transition-colors duration-300 text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest" href="services.html">Services</a>
+<a class="hover:text-primary transition-colors duration-300 text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest" href="about.html">About</a>
+<a class="text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full font-label-sm text-label-sm uppercase tracking-widest" href="contact.html">Contact</a>
+</div>
+<button onclick="window.location.href='contact.html'" class="bg-primary text-on-primary px-8 py-3 rounded-none font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all">
+                Enquire
+            </button>
+</div>
+</nav>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-8">
+<span class="font-label-md text-label-md text-primary uppercase tracking-[0.2em] block mb-6">Connect With Us</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Forging digital<br>legacies. Together.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Abhay Marketing Agency provides bespoke consulting for industry leaders. Reach out to discuss how we can refine your digital ecosystem.</p>
+</div>
+</div>
+</section>
+<!-- Main Content Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Contact Form Section -->
+<div class="md:col-span-7 bg-surface-container-low p-8 md:p-12 border border-outline-variant/20">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-12">Submit an Inquiry</h2>
+<form id="contactForm" class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative form-underline border-b border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase block mb-2">Name</label>
+<input class="w-full bg-transparent border-none px-0 py-2 focus:ring-0 text-on-surface font-body-md placeholder:text-outline/40" placeholder="Your full name" type="text" name="name" required>
+</div>
+<div class="relative form-underline border-b border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase block mb-2">Email Address</label>
+<input class="w-full bg-transparent border-none px-0 py-2 focus:ring-0 text-on-surface font-body-md placeholder:text-outline/40" placeholder="example@company.com" type="email" name="email" required>
+</div>
+</div>
+<div class="relative form-underline border-b border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase block mb-2">Service of Interest</label>
+<select name="service" class="w-full bg-transparent border-none px-0 py-2 focus:ring-0 text-on-surface font-body-md appearance-none cursor-pointer">
+<option class="bg-surface-container-high">Digital Strategy</option>
+<option class="bg-surface-container-high">Experience Design</option>
+<option class="bg-surface-container-high">Technology Architecture</option>
+<option class="bg-surface-container-high">Product Transformation</option>
+</select>
+</div>
+<div class="relative form-underline border-b border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase block mb-2">Message</label>
+<textarea class="w-full bg-transparent border-none px-0 py-2 focus:ring-0 text-on-surface font-body-md placeholder:text-outline/40 resize-none" placeholder="How can we assist you?" name="message" rows="4" required></textarea>
+</div>
+<div id="formMessage" class="hidden font-body-md p-4 mb-4"></div>
+<button class="group flex items-center gap-4 text-primary font-label-md text-label-md uppercase tracking-widest py-4 border-b border-primary/30 hover:border-primary transition-all" type="submit">
+                            Send Message
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Office & Inquiries Column -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<!-- Direct Inquiries -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/20 flex-1">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-[0.2em] mb-8">Direct Inquiries</h3>
+<ul class="space-y-8">
+<li class="flex flex-col gap-1 group">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">New Business</span>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:abhay28102003kumar@gmail.com">Abhay Marketing Agency provides bespoke consulting for industry leaders. Reach out to discuss how we can refine your digital ecosystem.</a>
+<div class="w-8 h-[1px] bg-primary-container mt-2 group-hover:w-12 transition-all"></div>
+</li>
+<li class="flex flex-col gap-1 group">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Media &amp; Press</span>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:abhay28102003kumar@gmail.com">Abhay Marketing Agency provides bespoke consulting for industry leaders. Reach out to discuss how we can refine your digital ecosystem.</a>
+<div class="w-8 h-[1px] bg-primary-container mt-2 group-hover:w-12 transition-all"></div>
+</li>
+<li class="flex flex-col gap-1 group">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Careers</span>
+<a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:abhay28102003kumar@gmail.com">Abhay Marketing Agency provides bespoke consulting for industry leaders. Reach out to discuss how we can refine your digital ecosystem.</a>
+<div class="w-8 h-[1px] bg-primary-container mt-2 group-hover:w-12 transition-all"></div>
+</li>
+</ul>
+</div>
+<!-- Map/Visual Element -->
+<div class="h-64 relative overflow-hidden grayscale brightness-50 opacity-80 border border-outline-variant/20">
+<img alt="Aerial view of a modern city at night" class="w-full h-full object-cover" alt="A cinematic, high-angle long exposure photograph of a sprawling metropolitan skyline at dusk. The city is illuminated with tiny amber and white lights, creating a complex web of urban connectivity. The atmosphere is moody and sophisticated, dominated by deep charcoals and navy blues with golden accents from the streetlights. The aesthetic is sharp, architectural, and exudes an air of premium global commerce." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq_RK-4OipsH5tlIoG6xzA16DhFIlwRsCQXq0V3ZbEMsU6MMZfthMswkKLewJHIfeSZvJaYvJJlk6NdxUcFseFzzqoAoUNJCL5NdFgkniDBf7XB7f-F_t5M6iL3Ym78BHrg9oTVfeqWi5Ys72Yo9Ir-kI_izj4O9jzVcwK_UIIhJ54vEJPmGuwVaSpdyxff6_sk_HUfOFraSek58NZ5eNzFnucWscnyonHdumaQ3ccHsoUxXpoma8EOSE4tmzF2NXOWKE-DibRJ-RJ" loading="lazy">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Offices Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-gap-desktop">
+<h2 class="font-label-md text-label-md text-primary uppercase tracking-[0.2em] mb-12">Our Offices</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- London -->
+<div class="group border-l border-outline-variant/30 pl-8 py-4 hover:border-primary transition-colors">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">London</h3>
+<address class="not-italic font-body-md text-on-surface-variant space-y-1 mb-6">
+<p class="">15 Curzon Street</p>
+<p class="">Mayfair, London W1J 5HE</p>
+<p class="">United Kingdom</p>
+</address>
+<a class="font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-2" href="#">
+                        View Map <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<!-- New York -->
+<div class="group border-l border-outline-variant/30 pl-8 py-4 hover:border-primary transition-colors">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">New York</h3>
+<address class="not-italic font-body-md text-on-surface-variant space-y-1 mb-6">
+<p class="">250 Hudson Street</p>
+<p class="">Manhattan, NY 10013</p>
+<p class="">United States</p>
+</address>
+<a class="font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-2" href="#">
+                        View Map <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 fade-in transition-opacity">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap-mobile md:py-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">ABHAY</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest text-center md:text-left">© 2024 ABHAY MARKETING AGENCY. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:text-primary underline-offset-4 hover:underline transition-all" href="privacy.html">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:text-primary underline-offset-4 hover:underline transition-all" href="terms.html">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:text-primary underline-offset-4 hover:underline transition-all" href="#">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-sm text-label-sm hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Insights</a>
+</div>
+</div>
+</footer>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.createElement('button');
+    mobileMenuBtn.className = 'md:hidden material-symbols-outlined text-3xl ml-4';
+    mobileMenuBtn.innerText = 'menu';
+    
+    const navContainer = document.querySelector('nav > div');
+    const enquireBtn = navContainer.querySelector('button');
+    navContainer.insertBefore(mobileMenuBtn, enquireBtn);
+
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'fixed inset-0 bg-background z-40 hidden flex-col items-center justify-center space-y-8';
+    
+    // Copy links
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+        const newLink = document.createElement('a');
+        newLink.href = link.href;
+        newLink.className = 'text-2xl uppercase tracking-widest text-on-surface';
+        newLink.innerText = link.innerText;
+        mobileMenu.appendChild(newLink);
+    });
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'absolute top-6 right-6 material-symbols-outlined text-4xl';
+    closeBtn.innerText = 'close';
+    closeBtn.onclick = () => mobileMenu.classList.add('hidden');
+    mobileMenu.appendChild(closeBtn);
+
+    document.body.appendChild(mobileMenu);
+
+    mobileMenuBtn.onclick = () => mobileMenu.classList.remove('hidden');
+});
+</script>
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-surface-container-high text-on-surface p-4 z-50 flex flex-col md:flex-row items-center justify-between border-t border-outline-variant/30 hidden">
+    <p class="font-body-sm text-sm mb-4 md:mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    <div class="flex gap-4">
+        <button id="accept-cookies" class="bg-primary text-on-primary px-6 py-2 uppercase text-xs tracking-widest font-bold">Accept</button>
+        <button id="decline-cookies" class="border border-outline px-6 py-2 uppercase text-xs tracking-widest">Decline</button>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+    }
+    document.getElementById('accept-cookies').onclick = function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    };
+    document.getElementById('decline-cookies').onclick = function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    };
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const messageDiv = document.getElementById('formMessage');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+            
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                messageDiv.classList.remove('hidden', 'bg-error/20', 'text-error', 'bg-primary/20', 'text-primary');
+                if (data.status === 'success') {
+                    messageDiv.classList.add('bg-primary/20', 'text-primary');
+                    messageDiv.textContent = data.message;
+                    form.reset();
+                } else {
+                    messageDiv.classList.add('bg-error/20', 'text-error');
+                    messageDiv.textContent = data.message;
+                }
+            })
+            .catch(error => {
+                messageDiv.classList.remove('hidden');
+                messageDiv.classList.add('bg-error/20', 'text-error');
+                messageDiv.textContent = 'An error occurred. Please try again later.';
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+});
+</script>
+</body>
+</html>
