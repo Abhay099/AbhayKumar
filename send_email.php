@@ -24,18 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
+        // Load environment variables
+        $env = parse_ini_file(__DIR__ . '/.env');
+        $smtp_email = $env['SMTP_EMAIL'] ?? 'abhay28102003kumar@gmail.com';
+        $smtp_password = $env['SMTP_PASSWORD'] ?? '';
+
         // Server settings
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'abhay28102003kumar@gmail.com'; // User's email
-        $mail->Password   = 'fhcc swob pebg dhod'; // User's app password
+        $mail->Username   = $smtp_email; // User's email
+        $mail->Password   = $smtp_password; // User's app password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('abhay28102003kumar@gmail.com', 'Website Contact Form');
-        $mail->addAddress('abhay28102003kumar@gmail.com', 'Abhay'); // Send to self
+        $mail->setFrom($smtp_email, 'Website Contact Form');
+        $mail->addAddress($smtp_email, 'Abhay'); // Send to self
         $mail->addReplyTo($email, $name);
 
         // Content
